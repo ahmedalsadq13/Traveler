@@ -1,0 +1,248 @@
+:root{
+    --mainColor:rgb(238, 59, 59);
+}
+*{
+    margin:0;
+    padding:0;
+    font-family:"Montserrat Semi Bold",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    font-size: 15px;
+    background-color:var(--mainColor,#CCC);
+    background-image:linear-gradient(to bottom, var(--mainColor,#FFF),black);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    perspective: 650px;
+    
+}
+
+a{
+    text-decoration: none;
+    color:#FFF;
+    transition: all .3s ease-in-out;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin:0 7px;
+}
+.container{    
+    display: flex;
+    width:80%;
+    height:85%;
+    background-color:#fff;
+    padding:10px;
+    border-radius:20px;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.120);
+}
+.left{
+    background-image:url(../images/Bled\ Castle\,\ Slovenia.jpg);
+    background-size:cover;
+    width:50%;
+    height:100%;
+    border-radius:15px;
+    padding:30px;
+    color:#FFF;
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+}
+
+.left .logo{
+    font-size:25px;
+}
+
+.text span{
+    display: block;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:5px;
+    font-weight:lighter
+}
+.text p {
+    font-size:24px;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+
+button{
+    all:unset;
+    background-color:#FFF;
+    color:rgb(37, 37, 37);
+    padding:12px 19px;
+    border-radius:7px;
+    margin-top:10px;
+    font-size:15px;
+    cursor:pointer;
+    transition:.5s
+}
+button:hover{
+    background-image:linear-gradient(to bottom,var(--mainColor,#FFF),black);
+    color:#FFF;
+}
+
+
+.right{
+    position: relative;
+    width:44%;
+    height: 100%;
+    border-radius:15px;
+    padding:30px 0px;
+}
+
+.right nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#333
+}
+
+.right nav a i {
+    position: absolute;
+    top:27px;
+    left:15px;
+    font-size:22px;
+    color:#333
+}
+.right .avatar{
+    width:45px;
+    height:45px;
+    background-color:var(--mainColor,#CCC);
+    border-radius:7px;
+    position: absolute;
+    top:18px;
+    right:25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.right .avatar i{
+    color:#FFF
+}
+
+.right p {
+    font-size:25px;
+    font-weight: bold;
+    margin:25px 0;
+}
+.right p + i{
+    color:#CCC;
+    margin-right:10px
+}
+.right input[type=search]{
+    all:unset;
+    background-color:rgb(240, 240, 240);
+    width:80%;
+    height:30px;
+    border-radius:25px;
+    padding:10px 15px;
+    position: relative;
+    caret-color:var(--mainColor,black);
+}
+
+.right .menu {
+    width:100%;
+    height: 40%;
+    color:#333;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top:20px
+    
+}
+
+.menu ul li a{
+    color: #333;
+    transition:.3s
+}
+.menu ul li a.active{
+    font-weight:bold;
+    border-bottom:2px solid #333;
+}
+.menu .myImages{
+    color:#FFF;
+    display: flex;
+    justify-content: space-between;
+    margin-top:25px;
+}
+.myImages div{
+    transition:.5s;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width:43%;
+    background-size: cover;
+    height: 250px;
+    margin:0 10px;
+    border-radius:20px;
+    padding:10px;
+    box-shadow:2px 2px 2px rgba(0,0,0,0.27);
+    background-position: center;
+    filter:grayscale(100%);
+}
+.myImages .first{
+    
+    background-image: url(../images/Brussels\,\ Belgium.jpg);
+}
+.myImages .second{
+    background-image: url(../images/Paris\,\ France.jpg);
+}
+
+.myImages div:hover {
+    transform: translateY(40px);
+    filter:grayscale(0%);
+    /*
+    ** Another filter to use **
+    filter:drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.558));
+
+    */ 
+    cursor:pointer;
+}
+
+/* Media Query */
+
+@media (max-width:1150px) {
+    ul li {
+        margin:0 3px
+    }
+}
+@media (max-width:900px) {
+    .container{
+        width:100%;
+    }
+    .right nav ul {
+        display: none;
+    }
+    .right .avatar{
+        display: none;
+    }
+    .right .menu ul li{
+        display: block;
+        margin-bottom:5px
+    }
+    .right .second{
+        display: none;
+    }
+    .right .first{
+        width:400px;
+        height:150px
+    }
+}
+
+@media (max-width:650px) {
+    .left p ,.right p {
+        font-size:22px
+    }
+}
+
+/* My Fonts */
+@font-face{
+    font-family: "Montserrat Semi Bold";
+    src:url(../fonts/Montserrat-SemiBold.otf)
+}
